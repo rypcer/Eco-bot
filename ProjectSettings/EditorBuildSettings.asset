@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 691c36e7ddf66394797831c5feb615a1
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: ea751714620e11e4eb78c09ebbe6a735
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 833753214ccc0d542b24b26c98db90be
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 6cb782af5499dcc43a48ce9191324961
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: c98b07d92b4e44f499b12641909875d2
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 7e8501e7564a10442aba705d5a3d557d
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 6a5cd6215c9d08b438b1d2635b5021bc
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: e17789d58e92a744aabb6704ae8fef4a
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: d2cc21859c6814b44865f4aad2af7cb4
+  - enabled: 1
+    path: Assets/Scenes/Level9.unity
+    guid: 1d0c6b6bd75445d4ab9a0638d8dbbccd
+  - enabled: 1
+    path: Assets/Scenes/Level10.unity
+    guid: 4a028f8ce612b6944bf59f4f0562c727
+  - enabled: 1
+    path: Assets/Scenes/Level11.unity
+    guid: 6d98d493327a50649b693ee5adbad568
+  - enabled: 1
+    path: Assets/Scenes/Level12.unity
+    guid: 081e130ff7346d84996ba7dd947c09bb
+  - enabled: 1
+    path: Assets/Scenes/Level13.unity
+    guid: 1f7206e88c1c98b47845ba91a1a8effa
+  - enabled: 1
+    path: Assets/Scenes/Level14.unity
+    guid: 357cb12d82eb7b240b77bdbb777a9ffc
+  - enabled: 1
+    path: Assets/Scenes/Level15.unity
+    guid: 7958bff2c2809b642927888d459ce924
+  - enabled: 1
+    path: Assets/Scenes/Level16.unity
+    guid: 377e3ff0465e14847919fd2d82829ce4
+  - enabled: 1
+    path: Assets/Scenes/FinalScreen.unity
+    guid: c8d67d16c9f12d84d81db65445959607
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 8d014635b35eafd449266604bd33a78b,
+      type: 2}
