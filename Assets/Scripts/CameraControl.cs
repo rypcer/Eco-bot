@@ -11,11 +11,10 @@ public class CameraControl : MonoBehaviour
     private float rotationSpeed;
     public int currentAngle { get; private set; }
     
-    //For Camera Sway
-    private Vector3 originalpos;
-    private Vector3 newpos;
-    private float speed = 0.00025f;
-    private float x, z;
+    //For Camera Drift
+    private Vector3 originalPosition;
+    private Vector3 newPosition;
+    private float driftSpeed;
     #endregion
 
     private void Awake()
@@ -33,9 +32,9 @@ public class CameraControl : MonoBehaviour
         isRotating = false;
         rotationSpeed = 100.0f;
         currentAngle = 90;
-
-        originalpos = transform.localPosition;
-        newpos = transform.localPosition + new Vector3(0.1f,0f,0.1f);
+        driftSpeed = 0.00025f;
+        originalPosition = transform.localPosition;
+        newPosition = transform.localPosition + new Vector3(0.1f,0f,0.1f);
     }
 
     //start the coroutine to rotate the focal point of the camera by 90 degrees
@@ -62,6 +61,20 @@ public class CameraControl : MonoBehaviour
         yield return null;
     }
 
+    //random drift of the camera
+    private void LateUpdate()
+    {
+        if (Vector3.Distance(transform.position, newPosition) < 0.001f)
+        {
+            float x, z;
+            x = Random.Range(originalPosition.x - 0.2f, originalPosition.x + 0.2f);
+            z = Random.Range(originalPosition.z - 0.2f, originalPosition.z + 0.2f);
+            newPosition = new Vector3(x, 0, z);
+        }
+
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition,newPosition,driftSpeed);
+    }
+
     public void ToggleCameraRotation(bool disable)
     {
         if (disable)
@@ -74,22 +87,9 @@ public class CameraControl : MonoBehaviour
     {
         inputActions.Controls.Enable();
     }
-    
+
     private void OnDisable()
     {
         inputActions.Controls.Disable();
-    }
-
-    //random drift of the camera
-    private void LateUpdate()
-    {
-        if (Vector3.Distance(transform.position, newpos) < 0.001f)
-        {
-            x = Random.Range(originalpos.x - 0.2f, originalpos.x + 0.2f);
-            z = Random.Range(originalpos.z - 0.2f, originalpos.z + 0.2f);
-            newpos = new Vector3(x, 0, z);
-        }
-
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition,newpos,speed);
     }
 }
