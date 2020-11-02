@@ -64,6 +64,9 @@ public class CameraControl : MonoBehaviour
     //random drift of the camera
     private void LateUpdate()
     {
+        // <summary>
+        // Code by Ajmal
+        // </summary>
         if (Vector3.Distance(transform.position, newPosition) < 0.001f)
         {
             float x, z;
